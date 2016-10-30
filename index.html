@@ -1,1 +1,85 @@
-test
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="app.css">
+</head>
+
+<body>
+
+<iframe src="header.html" width="980px" height="100px" frameborder="0" scrolling="no"></iframe>
+
+<nav>
+  <li class="Menu">
+    <a href="#" class="link">We Are (team name)</a>
+  </li>
+  <li class="Menu">
+    <a href="#" class="link">Info</a>
+    <div class="dropDownItemSet">
+      <a href="about_us.html" class="dropDownItem">About Us</a>
+      <a href="#" class="dropDownItem">Project Overview</a>
+      <a href="#" class="dropDownItem">Connect With Us</a>
+    </div>
+  </li>
+  <li class="Menu">
+    <a href="#" class="link">Focus On</a>
+    <div class="dropDownItemSet">
+      <a href="#" class="dropDownItem">Digital Marketing</a>
+    </div>
+  </li>
+  <li class="Menu">
+    <a href="#" class="link">What's New</a>
+    <div class="dropDownItemSet">
+      <a href="#" class="dropDownItem">Digital Marketing</a>
+    </div>
+  </li>
+</nav>
+
+<!--slider-->
+<div id="slider">
+  <ul class="slides">
+    <li class="slide"><img src="Image/slide1.jpg"></li>
+    <li class="slide"><img src="Image/slide2.jpg"></li>
+    <li class="slide"><img src="Image/slide3.jpg"></li>
+    <li class="slide"><img src="Image/slide4.jpg"></li>
+    <li class="slide"><img src="Image/slide5.jpg"></li>
+    <li class="slide"><img src="Image/slide1.jpg"></li>
+  </ul>
+
+  <!--arrow navigator-->
+  <div>
+    <img src="Image/leftArrow.png" id="leftButton">
+  </div>
+  <div>
+    <img src="Image/leftArrow.png" id="rightButton">
+  </div>
+</div>
+
+  <!--dot navigator-->
+<div align="center">
+  <ul id="bulletNavigator">
+    <li><input type="radio" name="location" value="1" checked="true"></li>
+    <li><input type="radio" name="location" value="2"></li>
+    <li><input type="radio" name="location" value="3"></li>
+    <li><input type="radio" name="location" value="4"></li>
+    <li><input type="radio" name="location" value="5"></li>
+  </ul>
+</div>
+
+<!-- Gallery -->
+<div id="gallery">
+  <a href="about_us.html"><img src="Image/team.jpg" class="leftImage"></a>
+  <a href="about_us.html"><img src="Image/team.jpg" class="rightImage"></a>
+</div>
+
+<!-- footer-->
+
+<iframe src="footer.html" width="960px" height="150px" frameborder="0" scrolling="no"></iframe>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="application.js"></script>
+</body>  
+</html>
+
