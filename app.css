@@ -197,7 +197,10 @@ nav{
   padding-top:5px;
 }
 .bg_intro {
+  position:absolute;
+  top:200px;
+  left:150px;
   width:960px;
   height:400px;
-  background:DarkTurquoise;
+  background:#00CED1;
 }
