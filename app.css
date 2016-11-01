@@ -209,25 +209,25 @@ nav{
   position:absolute;
   top:230px;
   left:170px;
-  z-index:0;
+  z-index:1;
 }
 #per2{
   position:absolute;
   top:200px;
   left:200px;
-  z-index:0;
+  z-index:1;
 }
 #per3{
   position:absolute;
   top:200px;
   left:230px;
-  z-index:0;
+  z-index:1;
 }
 #per4{
   position:absolute;
   top:200px;
   left:260px;
-  z-index:0;
+  z-index:1;
 }
 
 
