@@ -38,7 +38,7 @@ nav{
 }
 
 .dropDownItemSet{
-  display:none;
+  display:block;
   position:absolute;
   top:1500px;
   background-color: #20B2AA;
