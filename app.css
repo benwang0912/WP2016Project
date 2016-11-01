@@ -206,24 +206,32 @@ nav{
   z-index:-1;
 } 
 #per1.team{
+  border-radius: 50%;
+  border:3px solid #fff;
   position:absolute;
   top:230px;
   left:170px;
   z-index:1;
 }
 #per2.team{
+  border-radius: 50%;
+  border:3px solid #fff;
   position:absolute;
   top:200px;
   left:200px;
   z-index:1;
 }
 #per3.team{
+  border-radius: 50%;
+  border:3px solid #fff;
   position:absolute;
   top:200px;
   left:230px;
   z-index:1;
 }
 #per4.team{
+  border-radius: 50%;
+  border:3px solid #fff;
   position:absolute;
   top:200px;
   left:260px;
