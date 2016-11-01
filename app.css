@@ -215,7 +215,7 @@ nav{
 }
 #per2 .team { 
   border-radius: 50%;
-  border:3px solid #fff;
+  border:3px solid #000000;
   position:absolute;
   top:200px;
   left:200px;
