@@ -5,6 +5,17 @@ html, body, h1, h2, h3, a, p, article, aside, footer, header, main, nav, section
   padding:0;
 }
 
+#pics2 {
+  position:absolute;
+  top:100px;
+  left:200px;
+  color:black;
+  font-size:28px;
+  font-family:"Kozuka Mincho Pr6N H";
+  height:30px;
+  width:100px;
+
+}
 body{
   width : 960px;
   margin-left:auto;
