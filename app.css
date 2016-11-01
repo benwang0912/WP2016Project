@@ -18,7 +18,7 @@ nav{
 }
 
 .Menu{
-  position:absolute;
+  position:relative;
   display:inline-block;
   font-size:18px;
   margin-left:50px;
