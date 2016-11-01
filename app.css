@@ -205,7 +205,7 @@ nav{
   background:#00CED1;
   
 } 
-#per1.team{
+#per1 .team {
   border-radius: 50%;
   border:3px solid #fff;
   position:absolute;
@@ -213,7 +213,7 @@ nav{
   left:170px;
   
 }
-#per2.team{
+#per2 .team { 
   border-radius: 50%;
   border:3px solid #fff;
   position:absolute;
@@ -221,7 +221,7 @@ nav{
   left:200px;
   
 }
-#per3.team{
+#per3 .team {
   border-radius: 50%;
   border:3px solid #fff;
   position:absolute;
@@ -229,7 +229,7 @@ nav{
   left:230px;
   
 }
-#per4.team{
+#per4 .team {
   border-radius: 50%;
   border:3px solid #fff;
   position:absolute;
