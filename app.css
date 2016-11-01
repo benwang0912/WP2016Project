@@ -28,6 +28,7 @@ nav{
 .dropDownItemSet{
   display:none;
   position:absolute;
+  top:1500px;
   background-color: #DDDDDD;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -191,7 +192,7 @@ nav{
 #intro4 {
   font-size:20px;
   top:350px;
-  left:840px;
+  left:845px;
   color:white;
 
 }
@@ -211,7 +212,7 @@ nav{
 }
 #detail3 {
   top:400px;
-  left:700px;
+  left:690px;
   font-size:16px;
   font-family: 微軟正黑體;
   color:DarkTurquoise;
@@ -252,8 +253,8 @@ nav{
 #per1  {
   border-radius: 50%;
   border:0px solid #fff;
-  width:190px;
-  height:185px;
+  width:200px;
+  height:190px;
   position:absolute;
   top:200px;
   left:230px;
@@ -262,8 +263,8 @@ nav{
 #per2  { 
   border-radius: 50%;
   border:0px solid #fff;
-  width:190px;
-  height:185px;
+  width:200px;
+  height:190px;
   position:absolute;
   top:200px;
   left:460px;
@@ -272,8 +273,8 @@ nav{
 #per3  {
   border-radius: 50%;
   border:0px solid #fff;
-  width:190px;
-  height:185px;
+  width:200px;
+  height:190px;
   position:absolute;
   top:200px;
   left:690px;
@@ -282,8 +283,8 @@ nav{
 #per4  {
   border-radius: 50%;
   border:0px solid #fff;
-  width:190px;
-  height:185px;
+  width:200px;
+  height:190px;
   position:absolute;
   top:200px;
   left:920px;
