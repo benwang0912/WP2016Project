@@ -162,9 +162,69 @@ nav{
 
 #portrait ul li p{
   padding-top:50px;
-  font-size:20px;
-  font-family: 微軟正黑體;
+  font-family:微軟正黑體;
+  position:absolute;
+  
 }
+
+#intro1 {
+  font-size:20px;
+  top:350px;
+  left:240px;
+  color:white;
+
+}
+#intro2 {
+  font-size:20px;
+  top:350px;
+  left:375px;
+  color:white;
+
+}
+#intro3 {
+  font-size:20px;
+  top:350px;
+  left:710px;
+  color:white;
+
+}
+#intro4 {
+  font-size:20px;
+  top:350px;
+  left:840px;
+  color:white;
+
+}
+#detail1 {
+  top:400px;
+  left:240px;
+  font-size:16px;
+  font-family: 微軟正黑體;
+  color:DarkTurquoise;
+}
+#detail2 {
+  top:400px;
+  left:450px;
+  font-size:16px;
+  font-family: 微軟正黑體;
+  color:DarkTurquoise;
+}
+#detail3 {
+  top:400px;
+  left:700px;
+  font-size:16px;
+  font-family: 微軟正黑體;
+  color:DarkTurquoise;
+}
+#detail4 {
+  top:400px;
+  left:920px;
+  font-size:16px;
+  font-family: 微軟正黑體;
+  color:DarkTurquoise;
+}
+
+
 
 .textForRightImg{
   padding-left:100px;
@@ -182,44 +242,52 @@ nav{
 }
 .bg_intro {
   position:absolute;
-  top:200px;
-  left:250px;
+  top:150px;
+  left:198px;
   width:960px;
-  height:400px;
+  height:300px;
   background:DarkTurquoise;
-
+  z-index:0;
 } 
-/*#per1 .team {
+#per1  {
   border-radius: 50%;
-  border:3px solid #fff;
-  position:absolute;
-  top:230px;
-  left:170px;
-  z-index:1;
-}
-#per2 .team { 
-  border-radius: 50%;
-  border:3px solid #fff;
-  position:absolute;
-  top:200px;
-  left:200px;
-  z-index:1;
-}
-#per3 .team {
-  border-radius: 50%;
-  border:3px solid #fff;
+  border:0px solid #fff;
+  width:190px;
+  height:185px;
   position:absolute;
   top:200px;
   left:230px;
   z-index:1;
 }
-#per4 .team {
+#per2  { 
   border-radius: 50%;
-  border:3px solid #fff;
+  border:0px solid #fff;
+  width:190px;
+  height:185px;
   position:absolute;
   top:200px;
-  left:260px;
+  left:460px;
   z-index:1;
-}*/
+}
+#per3  {
+  border-radius: 50%;
+  border:0px solid #fff;
+  width:190px;
+  height:185px;
+  position:absolute;
+  top:200px;
+  left:690px;
+  z-index:1;
+}
+#per4  {
+  border-radius: 50%;
+  border:0px solid #fff;
+  width:190px;
+  height:185px;
+  position:absolute;
+  top:200px;
+  left:920px;
+  z-index:1;
+}
 
 
