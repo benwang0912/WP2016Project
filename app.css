@@ -196,4 +196,8 @@ nav{
 .footerList li{
   padding-top:5px;
 }
-
+.bg_intro li{
+  width:960px;
+  height:400px;
+  color:#00CED1;
+}
