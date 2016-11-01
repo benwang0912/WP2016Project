@@ -165,21 +165,10 @@ nav{
   height:150px;
   padding-top:50px;
 }
-
-#portrait ul li .leftImg{
-  float:left;
-  width:300px;
-  height:200px;
-}
-#portrait ul li .rightImg{
-  float:right;
-  width:300px;
-  height:200px;
-}
 #portrait ul li p{
   padding-top:50px;
   font-size:20px;
-  font-family: DFKai-sb;
+  font-family: 微軟正黑體;
 }
 
 .textForRightImg{
