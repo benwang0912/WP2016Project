@@ -30,7 +30,7 @@ nav{
 .dropDownItemSet{
   display:block;
   position:absolute;
-  top:1000px;
+  top:500px;
   background-color: #20B2AA;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
