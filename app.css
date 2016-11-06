@@ -5,6 +5,7 @@ html, body, h1, h2, h3, a, p, article, aside, footer, header, main, nav, section
   padding:0;
 }
 
+
 body{
   width : 960px;
   margin-left:auto;
@@ -23,19 +24,20 @@ nav{
   font-size:18px;
   margin-left:50px;
   margin-bottom:10px;
+  color:white;
 }
 
 .dropDownItemSet{
   display:none;
   position:absolute;
-  background-color: #DDDDDD;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index:1;
+  background-color: #20B2AA;
+  z-index:2;
 }
 
 .Menu:hover > a:first-child{
-  color:#7A0099;
+  color:#20B2AA;
 }
 
 .Menu:hover .dropDownItemSet{
@@ -50,7 +52,7 @@ nav{
   padding-top:10px;
   padding-bottom:10px;
   font-size: 16px;
-  color:#5599FF;
+  color:white;
 }
 
 .dropDownItem:hover{
@@ -113,26 +115,34 @@ nav{
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg);
+   
+
 }
 
 #bulletNavigator{
   display:inline;
   list-style-type:none;
+  
+
 }
 
 #bulletNavigator li{
   display:inline;
   cursor:default;
   padding-left:20px;
+  
+
 }
 
 #bulletNavigator li p{
   display:inline;
   cursor:default;
+
 }
 .link{
   text-decoration:none;
   font-weight:bold;
+  color:white;
 }
 
 #gallery{
@@ -160,40 +170,140 @@ nav{
   margin:0;
 }
 
-#portrait ul li{
-  width:960px;
-  height:150px;
-  padding-top:50px;
-}
-
-#portrait ul li .leftImg{
-  float:left;
-  width:300px;
-  height:200px;
-}
-#portrait ul li .rightImg{
-  float:right;
-  width:300px;
-  height:200px;
-}
 #portrait ul li p{
   padding-top:50px;
-  font-size:20px;
-  font-family: DFKai-sb;
+  font-family:微軟正黑體;
+  position:absolute;
+  
 }
+
+#intro1 {
+  font-size:20px;
+  top:350px;
+  left:240px;
+  color:white;
+
+}
+#intro2 {
+  font-size:20px;
+  top:350px;
+  left:375px;
+  color:white;
+
+}
+#intro3 {
+  font-size:20px;
+  top:350px;
+  left:710px;
+  color:white;
+
+}
+#intro4 {
+  font-size:20px;
+  top:350px;
+  left:845px;
+  color:white;
+
+}
+#detail1 {
+  top:400px;
+  left:240px;
+  font-size:16px;
+  font-family: 微軟正黑體;
+  color:DarkTurquoise;
+}
+#detail2 {
+  top:400px;
+  left:450px;
+  font-size:16px;
+  font-family: 微軟正黑體;
+  color:DarkTurquoise;
+}
+#detail3 {
+  top:400px;
+  left:690px;
+  font-size:16px;
+  font-family: 微軟正黑體;
+  color:DarkTurquoise;
+}
+#detail4 {
+  top:400px;
+  left:920px;
+  font-size:16px;
+  font-family: 微軟正黑體;
+  color:DarkTurquoise;
+}
+
+
 
 .textForRightImg{
   padding-left:100px;
 }
 
+.bg_intro {
+  position:absolute;
+  top:150px;
+  left:195px;
+  width:960px;
+  height:300px;
+  background:DarkTurquoise;
+  z-index:0; 
+} 
+#per1  {
+  border-radius: 50%;
+  border:0px solid #fff;
+  width:210px;
+  height:200px;
+  position:absolute;
+  top:200px;
+  left:230px;
+  z-index:1;
+}
+#per2  { 
+  border-radius: 50%;
+  border:0px solid #fff;
+  width:210px;
+  height:200px;
+  position:absolute;
+  top:200px;
+  left:460px;
+  z-index:1;
+}
+#per3  {
+  border-radius: 50%;
+  border:0px solid #fff;
+  width:210px;
+  height:200px;
+  position:absolute;
+  top:200px;
+  left:690px;
+  z-index:1;
+}
+#per4  {
+  border-radius: 50%;
+  border:0px solid #fff;
+  width:210px;
+  height:200px;
+  position:absolute;
+  top:200px;
+  left:920px;
+  z-index:1;
+}
+iframe#iframe1 {
+  background-color:#00CED1;
+  position:absolute;
+  top:850px;
+  left:200px;
+
+}
 .footerList{
   display:inline-block;
   vertical-align:top;
   margin:0;
   padding-top:10px;
   list-style-type:none;
+  color:gray;
 }
 .footerList li{
   padding-top:5px;
 }
-
