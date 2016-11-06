@@ -1,0 +1,37 @@
+<!DOCTYPE html> 
+<html>
+  <head> 
+    <title>Popup form </title>
+    <link rel="stylesheet"  href="app.css" />
+  </head> 
+
+<!-- body starts here -->
+<body id ="bdy" style="overflow:hidden;">
+
+<div id="abc">
+
+<!-- Popup div starts here -->
+  <div id="popupContact"> 
+
+<!-- contact us form -->
+    <form action="post.njs" method="post" id="form" >
+      <img src="../Image/close.png" id="close" onclick ="div_hide()" />
+      <h2>Looking for:</h2><hr/>
+      <input type="text" name="name" id="name" placeholder="Name"/>
+      
+      <input id="submit" type="submit" value="post submit">
+
+    </form>
+</div> 
+<!-- Popup div ends here -->
+</div>
+<!-- display popup button -->
+<CENTER><button id = "popup">Popup</button></CENTER>
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="application.js"></script>
+</body> 
+<!-- body ends here -->
+</html> 
+
