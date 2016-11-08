@@ -6,7 +6,7 @@ var param = qs.parse(fs.readFileSync('/dev/stdin','utf-8'));
 
 
 
-fs.readFile('name.json',function(data,err)
+fs.readFile('name.json',function(err,data)
 {
   console.log('Content-type:text/html; charset=utf-8\n');
 
