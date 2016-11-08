@@ -4,7 +4,7 @@ var fs = require('fs');
 var qs = require('qs');
 var param = qs.parse(fs.readFileSync('/dev/stdin','utf-8'));
 
-var per = require('./name.json');
+var per = require('name.json');
 
 console.log('Content-type:text/html; charset=utf-8\n');
 
