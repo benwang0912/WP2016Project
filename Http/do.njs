@@ -1,11 +1,15 @@
 #!/usr/local/bin/node 
 
-var fs = require('fs');
-var qs = require('qs');
-var param = qs.parse(fs.readFileSync('/dev/stdin','utf-8'));
-
-var data = require('name.json');
+var querystring = require('querystring');
+var param = querystring.parse(process.env.QUERY_STRING);
+var data = require('./name.json');
 
 console.log('Content-type:text/html; charset=utf-8\n');
 
-console.log("<h1>haha!I am" +data.param.name +"</h1>");
+if(data[param.name] == undefined)
+{
+  console.log("<h1><b>WHO?</b></h1>");
+}
+else{
+  console.log("<h1>Haha! I am" + data[param.name] +"</h1>");
+}
