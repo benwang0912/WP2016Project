@@ -1,7 +1,8 @@
 #!/usr/local/bin/node 
 
-var querystring = require('querystring');
-var param = querystring.parse(process.env.QUERY_STRING);
+var fs = require('fs');
+var qs = require('qs');
+var param = qs.parse(fs.readFileSync('/dev/stdin','utf-8'));
 var per = require('jsonfile');
 
 
