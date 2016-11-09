@@ -8,7 +8,7 @@ console.log('Content-type:text/html; charset=utf-8\n');
 
 if(data[param.name] == undefined)
 {
-  console.log("<h1><center><b>Oh! Hello STRANGER!!" + param.name "</b></center></h1>");
+  console.log("<h1><center><b>Oh! Hello STRANGER!!" + param.name + "</b></center></h1>");
 }
 else{
   if(data[data[param.name]] == 1)
