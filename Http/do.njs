@@ -17,15 +17,15 @@ else{
   }
   else if(data[data[param.name]] == 2)
   {
-    console.log("<center><img src=\"WP2016Project/孫上智.png\" width=\"1000\"></center>")
+    console.log("<center><img src=\"WP2016Project/孫上智.png\" width=\"1000\"></center>");
   }
   else if(data[data[param.name]] == 3)
   {
-    console.log("<center><img src=\"WP2016Project/王心平.png\" width=\"1000\"></center>")
+    console.log("<center><img src=\"WP2016Project/王心平.png\" width=\"1000\"></center>");
   }
   else if(data[data[param.name]] == 4)
   {
-    console.log("<center><img src=\"WP2016Project/張維碩.png\" width=\"1000\"></center>")
+    console.log("<center><img src=\"WP2016Project/張維碩.png\" width=\"1000\"></center>");
   }
   console.log("<h1><center>Welcome User:" + data[param.name] +"</center></h1>");
 }
