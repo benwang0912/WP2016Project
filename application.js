@@ -27,7 +27,7 @@ $(document).ready(function(){
 
     $.ajax({
       type:"POST",
-      url:"Http/login.njs",
+      url:"./Http/postExample.njs",
       data:{"account":$("#account").val(), "password":$("#password").val()},
       error: function(){
         alert("error");
