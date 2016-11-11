@@ -5,11 +5,30 @@
 <head>
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="app.css">
+<link rel="stylesheet"  href="popup.css" />
+<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="application.js"></script>
 </head>
 
 <body>
 
 <iframe src="header.html" width="960px" height="100px" frameborder="0" scrolling="no"></iframe>
+
+<!-- Popup div starts here -->
+<div id="abc">
+  <div id="popupContact"> 
+    <form id="form" >
+      <img src="Image/close.png" id="closePopUpForm" />
+      <h2 style="text-align:center">Sign In</h2><hr/>
+      <input type="text" name="Account" id="account" placeholder="Account"/>
+      <input type="text" name="Password" id="password" placeholder="Password"/>
+      
+      <a class="submit" id="login">Login </a>
+
+    </form>
+  </div> 
+</div>
+<!-- Popup div ends here -->
 
 <nav>
   <li class="Menu">
@@ -34,6 +53,9 @@
     <div class="dropDownItemSet">
       <a href="#" class="dropDownItem">Digital Marketing</a>
     </div>
+  </li>
+  <li class="Menu" style="float:right; padding-right:30px;">
+    <a class="link" style="cursor:pointer" id="signInButton">Sign In</a>
   </li>
 </nav>
 
@@ -78,8 +100,6 @@
 
 <iframe src="footer.html" width="960px" height="150px" frameborder="0" scrolling="no" ></iframe>
 
-<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
-<script src="application.js"></script>
 </body>  
 </html>
 

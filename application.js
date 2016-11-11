@@ -1,4 +1,42 @@
+$(document).ready(function(){
+  //for sign in button
+  $("#signInButton").on("click", function(){
+    div_show();
+  });
+  
+  //function to show Popup
+  function div_show(){ 
+    document.getElementById('abc').style.display = "block";
+  }
 
+  //function to hide Popup
+  $("#closePopUpForm").on("click",function div_hide(){ 
+    document.getElementById('abc').style.display = "none";
+  });
+  
+  //called when login button is clicked
+  $("#login").on("click", function(){
+    if($("#account").val() == ""){
+      alert("Fill All Blanks!!!!!");
+      return;
+    }
+    if($("#password").val() == ""){
+      alert("Fill All Blanks!!!!!");
+      return;
+    }
+
+    $.ajax({
+      type:"POST",
+      url:"Http/login.njs",
+      data:{"account":$("#account").val(), "password":$("#password").val()},
+      error: function(){
+        alert("error");
+      },
+      success:function(res){alert(res)}
+    }); 
+  });
+
+});
 //for slider
 $(function(){
   
@@ -74,4 +112,6 @@ $(function(){
   startSlider();
 
 });
+
+
 
