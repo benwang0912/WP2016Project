@@ -1,26 +1,41 @@
 $(document).ready(function(){
   //for sign in button
   $("#signInButton").on("click", function(){
-    div_show();
+    div_show("#loginForm");
   });
-  
-  //function to show Popup
-  function div_show(){ 
-    document.getElementById('abc').style.display = "block";
-  }
 
+  //called when logout button is clicked
+  $("#logoutButton").on("click", function(){
+    $("#header").contents().find("#userinfo").css("display", "none");
+    $("#signInButton").parent().show();
+    $("#logoutButton").parent().hide();
+    alert("Log out success");
+  });
+
+  //for showing register form
+  $("#popRegisterForm").on("click", function(){
+    div_show("#registerForm");
+  });
+
+  //function to show Popup
+  function div_show(ID){ 
+    $(ID).fadeIn();
+  }
   //function to hide Popup
-  $("#closePopUpForm").on("click",function div_hide(){ 
-    document.getElementById('abc').style.display = "none";
+  $(".closePopUpForm").on("click",function div_hide(){ 
+      $(this).parent().parent().parent().fadeOut();
   });
   
   //called when login button is clicked
   $("#login").on("click", function(){
-    if($("#account").val() == ""){
+    var container = $("#loginForm");
+    var account = $(this).parent().find("#account").val();
+    var password = $(this).parent().find("#password").val();
+    if(account == ""){
       alert("Fill All Blanks!!!!!");
       return;
     }
-    if($("#password").val() == ""){
+    if(password == ""){
       alert("Fill All Blanks!!!!!");
       return;
     }
@@ -28,11 +43,52 @@ $(document).ready(function(){
     $.ajax({
       type:"POST",
       url:"./Http/postExample.njs",
-      data:{"account":$("#account").val(), "password":$("#password").val()},
+      data:{"account":account, "password":password},
       error: function(){
-        alert("error");
+        alert("Something Wrong!!!!!");
       },
-      success:function(res){alert(res)}
+      success:function(res){
+        alert("Login success!!!");
+        $("#header").contents().find("#username").text(res);
+        $("#header").contents().find("#userinfo").css("display", "block");
+        $("#signInButton").parent().hide();
+        $("#logoutButton").parent().show();
+        container.fadeOut();
+      }
+    }); 
+  });
+
+  //called when register button is clicked
+  $("#register").on("click", function(){
+    var container = $("#registerForm");
+    var account = $(this).parent().find("#account").val();
+    var password = $(this).parent().find("#password").val();
+    var confirmPassword = $(this).parent().find("#confirmPassword").val();
+    if(account == ""){
+      alert("Fill All Blanks!!!!!");
+      return;
+    }
+    if(password == ""){
+      alert("Fill All Blanks!!!!!");
+      return;
+    }
+    
+    if(password != confirmPassword){
+      alert("Difference between password and confirm password!!!!!"+password+confirmPassword);
+      return;
+    }
+
+    $.ajax({
+      type:"POST",
+      url:"./Http/postExample.njs",
+      data:{"account":account, "password":password},
+      error: function(){
+        alert("Something Wrong!!!!!");
+      },
+      success:function(res){
+        alert("Register Success");
+        container.fadeOut();
+      }
     }); 
   });
 

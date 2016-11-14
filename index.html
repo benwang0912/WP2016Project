@@ -12,23 +12,40 @@
 
 <body>
 
-<iframe src="header.html" width="960px" height="100px" frameborder="0" scrolling="no"></iframe>
+<iframe id="header" src="header.html" width="960px" height="100px" frameborder="0" scrolling="no"></iframe>
 
-<!-- Popup div starts here -->
-<div id="abc">
+<!-- Popup login form starts here -->
+<div id="loginForm">
   <div id="popupContact"> 
     <form id="form" >
-      <img src="Image/close.png" id="closePopUpForm" />
-      <h2 style="text-align:center">Sign In</h2><hr/>
+      <img src="Image/close.png" class="closePopUpForm" />
+      <h2 style="text-align:center">Login</h2><hr/>
       <input type="text" name="Account" id="account" placeholder="Account"/>
-      <input type="text" name="Password" id="password" placeholder="Password"/>
+      <input type="password" name="Password" id="password" placeholder="Password"/>
       
       <a class="submit" id="login">Login </a>
+      <a class="submit" id="popRegisterForm">Don't have a account? </a>
 
     </form>
   </div> 
 </div>
-<!-- Popup div ends here -->
+<!-- Popup login form ends here -->
+<!-- Popup register form starts here -->
+<div id="registerForm">
+  <div id="popupContact"> 
+    <form id="form" >
+      <img src="Image/close.png" class="closePopUpForm" />
+      <h2 style="text-align:center">Register</h2><hr/>
+      <input type="text" name="Account" id="account" placeholder="Account"/>
+      <input type="password" name="Password" id="password" placeholder="Password"/>
+      <input type="password" name="ConfirmPassword" id="confirmPassword" placeholder="Confirm Password"/>
+      
+      <a class="submit" id="register">Register </a>
+
+    </form>
+  </div> 
+</div>
+<!-- Popup register form ends here -->
 
 <nav>
   <li class="Menu">
@@ -55,7 +72,10 @@
     </div>
   </li>
   <li class="Menu" style="float:right; padding-right:30px;">
-    <a class="link" style="cursor:pointer" id="signInButton">Sign In</a>
+    <a class="link" style="cursor:pointer" id="signInButton">Login</a>
+  </li>
+  <li class="Menu" style="float:right; padding-right:30px;display:none;">
+    <a class="link" style="cursor:pointer" id="logoutButton">Logout</a>
   </li>
 </nav>
 
