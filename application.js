@@ -1,4 +1,14 @@
 $(document).ready(function(){
+  //show welcome title if user has logged in
+  if(sessionStorage.user != undefined){
+    var header = $("#header");
+    header.load(function(){
+      header.contents().find("#username").text(sessionStorage.user);
+      header.contents().find("#userinfo").css("display", "block");
+    });
+    $("#signInButton").parent().hide();
+    $("#logoutButton").parent().show();    
+  }
   //for sign in button
   $("#signInButton").on("click", function(){
     div_show("#loginForm");
@@ -9,6 +19,7 @@ $(document).ready(function(){
     $("#header").contents().find("#userinfo").css("display", "none");
     $("#signInButton").parent().show();
     $("#logoutButton").parent().hide();
+    sessionStorage.removeItem("user");
     alert("Log out success");
   });
 
@@ -51,6 +62,9 @@ $(document).ready(function(){
         alert("Login success!!!");
         $("#header").contents().find("#username").text(res);
         $("#header").contents().find("#userinfo").css("display", "block");
+        //store it in local
+        //localStorage.setItem("user", res);
+        sessionStorage.user = res;
         $("#signInButton").parent().hide();
         $("#logoutButton").parent().show();
         container.fadeOut();
