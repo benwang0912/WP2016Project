@@ -42,7 +42,7 @@ $(document).ready(function(){
 
     $.ajax({
       type:"POST",
-      url:"./Http/postExample.njs",
+      url:"./Http/login.njs",
       data:{"account":account, "password":password},
       error: function(){
         alert("Something Wrong!!!!!");
@@ -63,12 +63,17 @@ $(document).ready(function(){
     var container = $("#registerForm");
     var account = $(this).parent().find("#account").val();
     var password = $(this).parent().find("#password").val();
+    var username = $(this).parent().find("#username").val();
     var confirmPassword = $(this).parent().find("#confirmPassword").val();
     if(account == ""){
       alert("Fill All Blanks!!!!!");
       return;
     }
     if(password == ""){
+      alert("Fill All Blanks!!!!!");
+      return;
+    }
+    if(username == ""){
       alert("Fill All Blanks!!!!!");
       return;
     }
@@ -80,8 +85,8 @@ $(document).ready(function(){
 
     $.ajax({
       type:"POST",
-      url:"./Http/postExample.njs",
-      data:{"account":account, "password":password},
+      url:"./Http/register.njs",
+      data:{"account":account, "password":password, "username":username},
       error: function(){
         alert("Something Wrong!!!!!");
       },
