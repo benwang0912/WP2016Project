@@ -1,0 +1,28 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "this is a nodejs project",
+  "main": "application.js",
+  "dependencies": {
+    "mongodb": "^2.2.11"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benwang0912/WP2016Project.git"
+  },
+  "keywords": [
+    "npm",
+    "node",
+    "package"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benwang0912/WP2016Project/issues"
+  },
+  "homepage": "https://github.com/benwang0912/WP2016Project#readme"
+}
