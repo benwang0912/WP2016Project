@@ -21,7 +21,7 @@ MongoClient.connect(url,function(err,db)
     console.log("connection establish to",url);
   
     var collection = db.collection('user');
-    collection.find( { account:'param.Account' ,password: 'param.Password'}).toArray(function(err,result){
+    collection.find( { account:'param.account' ,password: 'param.password'}).toArray(function(err,result){
     if(err)
     {
       console.log(err);
