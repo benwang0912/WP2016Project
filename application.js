@@ -56,7 +56,7 @@ $(document).ready(function(){
       url:"./Http/login.njs",
       data:{"account":account, "password":password},
       error: function(){
-        alert("Something Wrong!!!!!");
+        alert("Something Wrong with login!!!!!");
       },
       success:function(res){
         alert("Login success!!!");
@@ -102,7 +102,7 @@ $(document).ready(function(){
       url:"./Http/register.njs",
       data:{"account":account, "password":password, "username":username},
       error: function(){
-        alert("Something Wrong!!!!!");
+        alert("Something Wrong with register!!!!!");
       },
       success:function(res){
         alert("Register Success");
