@@ -18,7 +18,7 @@ MongooClient.connect(url,function(err,db)
     console.log('connection establish to',url);
   
     var collection = db.collection('user');
-    collection.find( {account: 'param.Account',password: 'param.Password'},function(err,data){
+    collection.find( {account: 'param.account',password: 'param.password'},function(err,data){
     
     if(data)
     {
