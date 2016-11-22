@@ -8,7 +8,7 @@ var mongodb = require('mongodb');
 var MongoClient = mongodb.MongoClient;
 var url = 'mongodb://wp2016_groupM:marketing@localhost:27017/wp2016_groupM';
 
-MongooClient.connect(url,function(err,db)
+MongoClient.connect(url,function(err,db)
 {
   if(err)
   {
