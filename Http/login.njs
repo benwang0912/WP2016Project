@@ -1,12 +1,13 @@
 #!/usr/local/bin/node
+
 var fs = require('fs');
 var qs = require('qs');
 var param = qs.parse(fs.readFileSync('/dev/stdin','utf-8'));
 
 console.log('Content-type:text/html; charset=utf-8\n');
+console.log('<h1>success</h1>');
 
 var mongodb = require('mongodb');
-
 var MongoClient = mongodb.MongoClient;
 var url = 'mongodb://wp2016_groupM:marketing@localhost:27017/wp2016_groupM';
 
@@ -14,23 +15,24 @@ MongoClient.connect(url,function(err,db)
 {
   if(err)
   {
-    console.log('Unable to connect to the server. Error:',err);
+    console.log("Unable to connect to the server. Error:",err);
   }
   else{
-    console.log('connection establish to',url);
+    console.log("connection establish to",url);
   
     var collection = db.collection('user');
-    collection.find( { account: param.account ,password: param.password},function(err,data){
-    
-    if(data)
+    collection.find( { account:'param.Account' ,password: 'param.Password'}).toArray(function(err,result){
+    if(err)
     {
-      console.log('Welcome,'+ data.account+);
+      console.log(err);
+    }
+    else if(result.length){
+      console.log('Welcome,',result);
     }
     else{
-      console.log('Cannot found');
+      console.log('No documents found with defined find criterial');
     }
-    });
-  
     db.close();
+  });
   }
 });
