@@ -3,6 +3,8 @@ var fs = require('fs');
 var qs = require('qs');
 var param = qs.parse(fs.readFileSync('/dev/stdin','utf-8'));
 
+console.log('Content-type:text/html; charset=utf-8\n');
+
 var mongodb = require('mongodb');
 
 var MongoClient = mongodb.MongoClient;
@@ -18,7 +20,7 @@ MongoClient.connect(url,function(err,db)
     console.log('connection establish to',url);
   
     var collection = db.collection('user');
-    collection.find( {account: 'param.account',password: 'param.password'},function(err,data){
+    collection.find( { account: param.account ,password: param.password},function(err,data){
     
     if(data)
     {
