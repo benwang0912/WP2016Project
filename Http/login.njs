@@ -3,23 +3,35 @@ var fs = require('fs');
 var qs = require('qs');
 var param = qs.parse(fs.readFileSync('/dev/stdin','utf-8'));
 
+console.log('Content-type:text/html; charset=utf-8\n');
+console.log('<h1>successful</h1>');
+
 var mongodb = require('mongodb');
+var MongoClient = mongodb.MongoClient;
+var url = 'mongodb://wp2016_groupM:marketing@localhost:27017/wp2016_groupM';
 
-var mongodbServer = new mongodb.Server('localhost',27017,{auto_reconnect: true, poolSize: 10});
-var db = new mongodb.Db('mydb',mongodbServer);
-
-
-db.open(function() {
-  db.collection('collection_name',function(err, collection){
+MongoClient.connect(url,function(err,db)
+{
+  if(err)
+  {
+    console.log("Unable to connect to the server. Error:",err);
+  }
+  else{
+    console.log("connection establish to",url);
   
-  collection.find({account: 'param.account',password: 'param.password'},function(err,data){
-    
-    if(data){
-      console.log('Welcome,'+ data.account+);
+    var collection = db.collection('user');
+    collection.find( { account: "param.account" ,password: "param.password"},function(err,result){
+    if(err)
+    {
+      console.log(err);
+      console.log('Login failed');
     }
-    else{
-      console.log('Cannot found');
+    else {
+      console.log('Welcome,' + result.account);
     }
+      
+    db.close();
   });
-  });
+  }
+>>>>>>> 58e5a164bd94ee0db2906323d0c379b46fe0cccf
 });
