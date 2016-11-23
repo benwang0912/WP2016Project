@@ -28,7 +28,7 @@ MongoClient.connect(url,function(err,db)
       console.log('Login failed');
     }
     else {
-      console.log('Welcome,',+ result.account +);
+      console.log('Welcome,' + result.account);
     }
       
     db.close();
