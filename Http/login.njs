@@ -33,5 +33,4 @@ MongoClient.connect(url,function(err,db)
     db.close();
   });
   }
->>>>>>> 58e5a164bd94ee0db2906323d0c379b46fe0cccf
 });
