@@ -26,7 +26,10 @@ MongoClient.connect(url, function(err, db) {
     if(err){
       console.log("Insertion failed");
     }
+    else
+    {
     console.log("Inserted");
+    }
     });
     }
     db.close();
