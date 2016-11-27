@@ -13,6 +13,7 @@
 
 <body>
 
+<script src="facebook.js"></script>
 <iframe id="header" src="header.html" width="960px" height="100px" frameborder="0" scrolling="no"></iframe>
 <!-- Popup login form starts here -->
 <div id="loginForm">
@@ -25,6 +26,8 @@
       
       <a class="submit" id="login">Login </a>
       <a class="submit" id="popRegisterForm">Don't have a account? </a>
+      <fb:login-button scope='email, public_profile' onlogin="testAPI();">
+      </fb:login-button>
 
     </form>
   </div> 
@@ -64,6 +67,13 @@
     <a href="#" class="link">Focus On</a>
     <div class="dropDownItemSet">
       <a href="#" class="dropDownItem">Digital Marketing</a>
+    </div>
+  </li>
+  <li class="Menu">
+    <a href="#" class="link">Post Ad</a>
+    <div class="dropDownItemSet">
+      <a href="postBannerAD.html" class="dropDownItem">Banner AD</a>
+      <a href="#" class="dropDownItem">Comming soon...</a>
     </div>
   </li>
   <li class="Menu">
