@@ -69,7 +69,7 @@ version    : 'v2.8' // use graph api version 2.8
 // successful.  See statusChangeCallback() for when this call is made.
 function testAPI() {
   console.log('Welcome!  Fetching your information.... ');
-  FB.api('/me', function(response) {
+  FB.api('/me',{"fields":"id,name,email"}, function(response) {
   console.log('id:'+response.id+'email'+response.mail);
     $.ajax({
       type:"POST",
