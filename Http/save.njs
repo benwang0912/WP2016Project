@@ -4,8 +4,8 @@ var fs = require('fs');
 var qs = require('qs');
 var param = qs.parse(fs.readFileSync('/dev/stdin', 'utf-8'));
 
+console.log('Content-type: text/html; charset=utf-8\n');
 
-console.log('Content-type:text/html; charset=utf-8\n');
 var MongoClient = require('mongodb').MongoClient, assert = require('assert');
 
 var url = 'mongodb://wp2016_groupM:marketing@localhost:27017/wp2016_groupM';
@@ -16,10 +16,10 @@ MongoClient.connect(url, function(err, db) {
     console.log("Connection failed");
     }
     else{
-    console.log(param.account);
-    var collection = db.collection('user');
+    console.log("Connected correctly to server");
+    var collection = db.collection('banner');
     collection.insert(
-        { username : param.username, account : param.account, password : param.password }
+        {account : param.account, ad : param.ad, searchKey : param.searchKey, content : param.content }
     , function(err, result) {
     if(err){
       console.log("Insertion failed");

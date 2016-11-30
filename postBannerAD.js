@@ -123,4 +123,22 @@
       }
     }); 
 });
+    $("#SaveAD").on("click",function(){
+      var title = $(this).parent().find("#title").val();
+      var searchKey = $(this).parent().find("#searchKey").val();
+      var ADContent = $(this).parent().find("#ADContent").val();
+      var account = sessionStorage.user;
+
+      $.ajax({
+        type:"POST",
+        url:"./Http/save.njs",
+        data:{"account":account,"ad":title,"searchKey":searchKey,"content":ADContent},
+        error:function(){
+          alert("Saving to database error");
+        },
+        success:function(){
+          alert("Saving to database success");
+        }
+    });
+    });
 });
