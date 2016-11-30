@@ -39,6 +39,51 @@ form{
   background-color: white;
 }
 
+#ADpreview{
+ width:450px;
+ height:300px;
+ position:absolute;
+ top:180px;
+ left:225px;
+ border:2px dashed gray;
+}
+#preview{
+  position:absolute;
+  width:450px;
+  height:300px;
+
+}
+.choose {
+  position:relative;
+  top:350px;
+  width:80px;
+  height:80px;
+  display:inline-block;
+  z-index:0;
+}
+#topic1{
+  position:absolute;
+  left:130px;
+  top:35px;
+  width:28px;
+  height:28px;
+  padding:80px 80px;
+  border-radius:999px;
+  background-color:black;
+  opacity:0.4;
+  z-index:1;
+}
+#topic3{
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:290px;
+  height:10px;
+  padding:80px 80px;
+  background-color:black;
+  opacity:0.4;
+  z-index:1;
+}
 p{
   margin-top: 30px;
 }

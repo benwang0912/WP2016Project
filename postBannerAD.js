@@ -1,4 +1,4 @@
-$(document).ready(function(){
+  $(document).ready(function(){
   //show welcome title if user has logged in
   if(sessionStorage.user != undefined){
     var header = $("#header");
@@ -10,9 +10,11 @@ $(document).ready(function(){
     $("#logoutButton").parent().show();
     $("#message").hide();
     $("#AD").show();
+    $("#ADpreview").show();
   }else{
     $("#message").show();
     $("#AD").hide();
+    $("#ADpreview").hide();
   }
   //for sign in button
   $("#signInButton").on("click", function(){
@@ -26,6 +28,7 @@ $(document).ready(function(){
     $("#logoutButton").parent().hide();
     $("#message").show();
     $("#AD").hide();
+    $("#ADpreview").hide();
     sessionStorage.removeItem("user");
     alert("Log out success");
   });
@@ -75,6 +78,7 @@ $(document).ready(function(){
         $("#signInButton").parent().hide();
         $("#logoutButton").parent().show();
         $("#AD").show();
+        $("#ADpreview").show();
         $("#message").hide();
         container.fadeOut();
       }
@@ -118,6 +122,5 @@ $(document).ready(function(){
         container.fadeOut();
       }
     }); 
-  });
-
+});
 });

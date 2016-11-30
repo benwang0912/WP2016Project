@@ -7,6 +7,7 @@
 <link rel="stylesheet"  href="popup.css" />
 <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
 <script src="postBannerAD.js"></script>
+<script src="ADpreview.js"></script>
 </head>
 <body>
 
@@ -105,11 +106,23 @@
       </ul>
       <a class="submit" id="SaveAD">Save</a>
     </form>
-
 <!--show preview here-->
-
 </div>
-
+<div id="ADpreview" style=" margin-left:450px">
+    <img class="operation" id="preview" src="">
+    <p id="word">preview</p>
+    <p id="topic1"></p> 
+    <!--<p id="topic2"></p>--> 
+    <p id="topic3"></p> 
+    <!--<p id="topic4"></p>--> 
+    <img class="choose" id="background"src="Image/bg.png" >
+    <div id="allbg">
+    <img class="choose"  id="bg1" src="Image/bg1.jpg">
+    <img class="choose"  id="bg2" src="Image/bg2.jpg">
+    <img class="choose"  id="bg3" src="Image/bg3.jpg">
+    <img class="choose"  id="bg4" src="Image/bg4.jpg">
+    </div>
+</div>
 <!--If user hasn't logged in. show this message-->
 <div id="message" style="display:none;">
   <p> If you want to use this service. </p>
