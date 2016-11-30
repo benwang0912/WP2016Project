@@ -79,6 +79,15 @@ function testAPI() {
         alert("Something Wrong with Facebook login!!!!!");
       },
       success:function(res){
+        alert("Login success!!!");
+        $("#header").contents().find("#username").text(res);
+        $("#header").contents().find("#userinfo").css("display", "block");
+        //store it in local
+        //localStorage.setItem("user", res);
+        sessionStorage.user = res;
+        $("#signInButton").parent().hide();
+        $("#logoutButton").parent().show();
+        container.fadeOut();
         alert("Facebook login Success");
       }
   })
