@@ -1,4 +1,4 @@
-  $(document).ready(function(){
+$(document).ready(function(){
   //show welcome title if user has logged in
   if(sessionStorage.user != undefined){
     var header = $("#header");
@@ -121,8 +121,8 @@
         alert("Register Success");
         container.fadeOut();
       }
-    }); 
-});
+    });
+    });
     $("#SaveAD").on("click",function(){
       var title = $(this).parent().find("#title").val();
       var searchKey = $(this).parent().find("#searchKey").val();
