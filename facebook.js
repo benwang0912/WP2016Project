@@ -71,6 +71,8 @@ function testAPI() {
   console.log('Welcome!  Fetching your information.... ');
   FB.api('/me',{"fields":"id,name,email"}, function(response) {
   console.log('id:'+response.id+'email'+response.mail);
+  sessionStorage.user = response.name;
+  alert(response.name);
     $.ajax({
       type:"POST",
       url:"./Http/register.njs",
@@ -87,6 +89,10 @@ function testAPI() {
         sessionStorage.user = res;
         $("#signInButton").parent().hide();
         $("#logoutButton").parent().show();
+        $("#message").hide();
+        $("#loginForm").hide();
+        $("#AD").show();
+        $("#ADpreview").show();
         container.fadeOut();
         alert("Facebook login Success");
       }
