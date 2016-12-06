@@ -122,23 +122,63 @@ $(document).ready(function(){
         container.fadeOut();
       }
     });
-    });
-    $("#SaveAD").on("click",function(){
-      var title = $(this).parent().find("#title").val();
-      var searchKey = $(this).parent().find("#searchKey").val();
-      var ADContent = $(this).parent().find("#ADContent").val();
-      var account = sessionStorage.user;
+  });
+  
+  $("#SaveAD").on("click",function(){
+    var title = $(this).parent().find("#title").val();
+    var searchKey = $(this).parent().find("#searchKey").val();
+    var ADContent = $(this).parent().find("#ADContent").val();
+    var receiverList = $(this).parent().find("#receiver").val();
+    var account = sessionStorage.user;
+    
+    if(!receiverList.match( "([a-zA-Z0-9]*@gmail.com,)*[a-zA-Z0-9]*@gmail.com" )){
+      alert("Receiver Gmail has wrong format!!!\n (use '，' to seperate them if there are more than one receivers)");
+      return;
+    }
 
-      $.ajax({
-        type:"POST",
-        url:"./Http/save.njs",
-        data:{"account":account,"ad":title,"searchKey":searchKey,"content":ADContent},
-        error:function(){
-          alert("Saving to database error");
-        },
-        success:function(){
-          alert("Saving to database success");
-        }
+    
+    //save AD format
+    $.ajax({
+      type:"POST",
+      url:"./Http/save.njs",
+      data:{"account":account,"ad":title,"searchKey":searchKey,"content":ADContent},
+      error:function(){
+        alert("Saving to database error");
+      },
+      success:function(){
+        alert("Saving to database success");
+      }
     });
+    
+    function downloadURI(uri, name) {
+        var link = document.createElement("a");
+        link.download = name;
+        link.href = uri;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        delete link;
+    }
+
+    var img;
+    html2canvas($('#ADpreview'), {
+      onrendered: function(canvas) {
+          img = canvas.toDataURL();
+          downloadURI(img, "test.png");
+          //send AD to receiver
+          $.ajax({
+            type:"POST",
+            url:"./Http/sendMail.njs",
+            data:{"AD":img.replace(/^data:image\/(png|gif|jpeg);base64,/,''), "receiver":receiverList},
+            error:function(err){
+              alert("Something wrong");
+            },
+            success:function(res){
+              alert(res);
+            }
+          });
+      }
     });
+
+  });
 });

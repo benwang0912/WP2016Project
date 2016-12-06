@@ -6,6 +6,7 @@
 <link rel="stylesheet" type="text/css" href="app.css">
 <link rel="stylesheet"  href="popup.css" />
 <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript" src="html2canvas.js"></script>
 <script src="postBannerAD.js"></script>
 <script src="ADpreview.js"></script>
 </head>
@@ -97,14 +98,10 @@
       <h2 style="text-align:center">POST AD</h2><hr/>
       <input type="text" name="Title" id="title" placeholder="AD Title"/>
       <input type="text" name="Keyword" id="searchKey" placeholder="Search Key Word"/>
-      <textarea name="ADContent" id="ADContent" rows="4" cols="25" maxlength="50" placeholder="Content(less then 50 words)"></textarea>
-      <ul class="styleSelector">
-        <li><input type="radio" name="Style" value="style1" id="style1" checked="checked"><label for="style1"><img src="Image/close.png"></label></li>
-        <li><input type="radio" name="Style" value="style2" id="style2"><label for="style2"><img src="Image/close.png"></label></li>
-        <li><input type="radio" name="Style" value="style3" id="style3"><label for="style3"><img src="Image/close.png"></label></li>
-        <li><input type="radio" name="Style" value="style4" id="style4"><label for="style4"><img src="Image/close.png"></label></li>
-      </ul>
-      <a class="submit" id="SaveAD">Save</a>
+      <textarea name="ADContent" id="ADContent" rows="4" cols="25" maxlength="50" style="margin-bottom:10px;" placeholder="Content(less then 50 words)"></textarea>
+      <p style="margin:0px;">Receiver Gmail:</p>
+      <input type="text" name="Receiver" id="receiver" style="margin:0px; margin-bottom:10px;" placeholder="rec1@gmail.com, rec2@gmail.com"/>
+      <a class="submit" id="SaveAD">Send</a>
     </form>
 <!--show preview here-->
 </div>

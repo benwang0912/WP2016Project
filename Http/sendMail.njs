@@ -1,29 +1,37 @@
 #!/usr/local/bin/node
 
+var fs = require('fs');
+var qs = require('qs');
 var mailer = require("nodemailer");
+
+var param = qs.parse(fs.readFileSync('/dev/stdin', 'utf-8'));
+
+console.log('Content-type: text/html; charset=utf-8\n');
 
 // Use Smtp Protocol to send Email
 var smtpTransport = mailer.createTransport("SMTP",{
 service: "Gmail",
 auth: {
-user: process.env.EmailAddress,
-pass: process.env.EmailPassword
+user: "forwp2016finalproject@gmail.com",
+pass: "webprogramming"
 }
 });
 
 var mail = {
-      from: process.env.EmailAddress,
-      to: "benwang0912@gmail.com",
+      from: "forwp2016finalproject@gmail.com",
+      to: param.receiver,
       subject: "test",
-      html: "<img src='http://image.cuishilin.com/thumb/280x220/c/62/c62b2049905bc6f4b25a036d1c27a90b.jpg'>"
+      attachments:[{filename:"test.png",
+                    contents: new Buffer(param.AD, 'base64'),
+      }],
 }
 
 smtpTransport.sendMail(mail, function(error, response){
-    if(error){
+  if(error){
     console.log(error);
-    }else{
-    console.log("Message sent: " + response.message);
-    }
+  }else{
+    console.log("Message sent to: " + param.receiver);
+  }
 
-    smtpTransport.close();
+  smtpTransport.close();
 });
