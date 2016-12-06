@@ -150,6 +150,7 @@ $(document).ready(function(){
       }
     });
     
+    /*
     function downloadURI(uri, name) {
         var link = document.createElement("a");
         link.download = name;
@@ -159,17 +160,17 @@ $(document).ready(function(){
         document.body.removeChild(link);
         delete link;
     }
-
+    */
     var img;
     html2canvas($('#ADpreview'), {
       onrendered: function(canvas) {
           img = canvas.toDataURL();
-          downloadURI(img, "test.png");
+    //      downloadURI(img, "test.png");
           //send AD to receiver
           $.ajax({
             type:"POST",
             url:"./Http/sendMail.njs",
-            data:{"AD":img.replace(/^data:image\/(png|gif|jpeg);base64,/,''), "receiver":receiverList},
+            data:{"title":title,"AD":img.replace(/^data:image\/(png|gif|jpeg);base64,/,''), "receiver":receiverList},
             error:function(err){
               alert("Something wrong");
             },

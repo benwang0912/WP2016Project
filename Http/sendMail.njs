@@ -20,8 +20,8 @@ pass: "webprogramming"
 var mail = {
       from: "forwp2016finalproject@gmail.com",
       to: param.receiver,
-      subject: "test",
-      attachments:[{filename:"test.png",
+      subject: param.title,
+      attachments:[{filename:param.title+".png",
                     contents: new Buffer(param.AD, 'base64'),
       }],
 }
