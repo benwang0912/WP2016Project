@@ -5,6 +5,8 @@ $(document).ready(function(){
   $("#bg4").hide();
   $("#bg5").hide();
   $("#topic5s").hide();
+  $("#topic5s1").hide();
+  $("#fontForm").hide();
 
   $("#title").on("keyup",function(){
     var title = $("#ADForm").find("#title").val();
@@ -22,6 +24,15 @@ $(document).ready(function(){
     $("#bg3").show();
     $("#bg4").show();
     $("#bg5").show();
+    $("#fontForm").hide();    
+  });
+  $("#font").on("click",function(){
+    $("#fontForm").show();    
+    $("#bg1").hide();
+    $("#bg2").hide();
+    $("#bg3").hide();
+    $("#bg4").hide();
+    $("#bg5").hide();
   });
   
   $("#allbg img ").on("click",function(){
@@ -37,6 +48,7 @@ $(document).ready(function(){
       $("#word").addClass("word1");
       $("#content").addClass("content1");
       $("#topic5s").hide();
+      $("#topic5s1").hide();
     }
     else if(t == 2)
     { 
@@ -47,6 +59,7 @@ $(document).ready(function(){
       $("#word").addClass("word2");
       $("#content").addClass("content2");
       $("#topic5s").hide();
+      $("#topic5s1").hide();
     }
     else if(t == 3)
     {
@@ -57,6 +70,7 @@ $(document).ready(function(){
       $("#word").addClass("word3");
       $("#content").addClass("content3");
       $("#topic5s").hide();
+      $("#topic5s1").hide();
     }
     else if(t == 4)
     {
@@ -67,6 +81,7 @@ $(document).ready(function(){
       $("#word").addClass("word4");
       $("#content").addClass("content4");
       $("#topic5s").hide();
+      $("#topic5s1").hide();
     }
     else if(t == 5)
     {
@@ -77,6 +92,7 @@ $(document).ready(function(){
       $("#word").addClass("word5");
       $("#content").addClass("content5");
       $("#topic5s").show();
+      $("#topic5s1").show();
     }
   }); 
  }); 

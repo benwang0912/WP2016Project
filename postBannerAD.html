@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<DOCTYPE html>
 <html>
 
 <head>
@@ -9,8 +9,40 @@
 <script type="text/javascript" src="html2canvas.js"></script>
 <script src="postBannerAD.js"></script>
 <script src="ADpreview.js"></script>
+<script language="javaScript" >
+  var drag =false;
+  var Kx,Ky;
+  var x0,y0;
+  var K ;
+  function md(){
+      drag = true;
+      K = event.srcElement;
+      Kx = K.offsetLeft;
+      Ky = K.offsetTop;
+      x0 = event.clientX;
+      y0 = event.clientY;
+  }
+  function mv(){
+      if(drag){
+        K.style.posLeft = Kx +(event.clientX - x0);
+        K.style.poseTop = Ky +(event.clientY - y0);
+      }
+  }
+  function mup(){
+      drag = false;
+  }
+  
+  function fzchange(x){
+      var chagefz =document.getElementById("word");
+      chagefz.style.fontSize = Number(x)+ "px";
+  }
+  function ffchange(y){
+      var chageff =document.getElementById("word");
+      chageff.style.fontFamilyamily=y;
+  }
+</script>
 </head>
-<body>
+<body onmousemove="mv()" onmouseup="mup()">
 
 <script src="facebook.js"></script>
 <iframe id="header" src="header.html" width="960px" height="100px" frameborder="0" scrolling="no"></iframe>
@@ -105,21 +137,43 @@
     </form>
 <!--show preview here-->
 </div>
-<div id="ADpreview" style=" margin-left:450px">
+<div id="ADpreview" style="margin-left:450px;position:absolute; width=160px; height=80px;">
     <img class="operation" id="preview" src="">
-    <p id="word"></p>
+    <div id="word" onmousedown="md()"></div>
     <p id="topic"></p>
     <p id="topic5s"></p>
-    <p id="content"></p>
+    <p id="topic5s1"></p>
+    <div id="content" onmousedown="md()"></div>
     <div>
-    <img id="background"src="Image/bg.png" >
+    <img  id="background"src="Image/bg.png" >
+    <img  id="font"src="Image/font.png" >
     <div id="allbg">
     <img class="choose"  id="bg1" src="Image/bg1.jpg">
     <img class="choose"  id="bg2" src="Image/bg2.jpg">
     <img class="choose"  id="bg3" src="Image/bg3.jpg">
     <img class="choose"  id="bg4" src="Image/bg4.jpg">
     <img class="choose"  id="bg5" src="Image/bg5.jpg">
+   </div>
     </div>
+    <div style="border:3px solid transparent">
+    <form id="fontForm">
+    <p>
+    font size:<select onchange="fzchange(this.options[this.selectedIndex].value);">
+              <option value="8">8</option>
+              <option value="10">10</option>
+              <option value="12">12</option>
+              <option value="16">16</option>
+              <option value="20">20</option>
+              <option value="26">26</option>
+              <option value="32">32</option>
+              <option value="48">48</option>
+              <option value="64">64</option>
+              </select>
+    font style:<select onchange="ffchange(this.options[this.selectedIndex].value);">
+               <option value="新細明體">新細明體</option>
+               <option value="微軟正黑體">微軟正黑體</option>
+               <option value="SimHei">SimHei</option>
+              </select> </p></form>
     </div>
 </div>
 <!--If user hasn't logged in. show this message-->
