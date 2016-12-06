@@ -18,15 +18,11 @@ MongoClient.connect(url, function(err, db) {
     else{
     console.log(param.account);
     var collection = db.collection('user');
-    collection.insert(
+      collection.insert(
         { username : param.username, account : param.account, password : param.password }
     , function(err, result) {
     if(err){
       console.log("Insertion failed");
-    }
-    else
-    {
-    console.log("Inserted");
     }
     });
     }

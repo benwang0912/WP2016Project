@@ -141,7 +141,7 @@ $(document).ready(function(){
     $.ajax({
       type:"POST",
       url:"./Http/save.njs",
-      data:{"account":account,"ad":title,"searchKey":searchKey,"content":ADContent},
+      data:{"account":account,"ad":title,"searchKey":searchKey,"content":ADContent,"receiver":receiver},
       error:function(){
         alert("Saving to database error");
       },
