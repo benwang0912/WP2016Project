@@ -128,7 +128,7 @@
 <div id="AD" style="margin-top:20px; margin-bottom:20px;">
     <form id="ADForm" >
       <h2 style="text-align:center">POST AD</h2><hr/>
-      <input type="text" name="Title" id="title" placeholder="AD Title"/>
+      <input type="text" name="Title" id="title" rows="2" placeholder="AD Title"/>
       <input type="text" name="Keyword" id="searchKey" placeholder="Search Key Word"/>
       <textarea name="ADContent" id="ADContent" rows="4" cols="25" maxlength="50" style="margin-bottom:10px;" placeholder="Content(less then 50 words)"></textarea>
       <p style="margin:0px;">Receiver Gmail:</p>
@@ -139,7 +139,7 @@
 </div>
 <div id="ADpreview" style="margin-left:450px;position:absolute; width=160px; height=80px;">
     <img class="operation" id="preview" src="">
-    <div id="word" onmousedown="md()"></div>
+    <div id="word" onmousedown="md()"style='white-space:pre-wrap;'></div>
     <p id="topic"></p>
     <p id="topic5s"></p>
     <p id="topic5s1"></p>
