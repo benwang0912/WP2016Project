@@ -3,6 +3,9 @@
 $("#popup").on("click", function(){
   div_show();
 });
+$("#popup1").on("click", function(){
+  div_show();
+});
 
 function div_show(){ 
   document.getElementById('abc').style.display = "block";
