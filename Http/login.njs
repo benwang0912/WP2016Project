@@ -6,7 +6,7 @@ var param = qs.parse(fs.readFileSync('/dev/stdin','utf-8'));
 console.log('Content-type:text/html; charset=utf-8\n');
 var mongodb = require('mongodb');
 var MongoClient = mongodb.MongoClient;
-var url = 'mongodb://wp2016_groupM:marketing@localhost:27017/wp2016_groupM';
+var url = '';
 
 MongoClient.connect(url,function(err,db)
 {
