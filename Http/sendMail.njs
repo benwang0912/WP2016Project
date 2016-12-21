@@ -17,10 +17,18 @@ pass: "webprogramming"
 }
 });
 
+fs.writeFile("./test.png", param.AD,"base64" , function(error){
+    if(error){
+      console.log(error);
+    }
+
+});
+
 var mail = {
       from: "forwp2016finalproject@gmail.com",
       to: param.receiver,
       subject: param.title,
+      html:"<img src='http://luffy.ee.ncku.edu.tw/~sinpin00/WP2016Project/Http/test.png'>",
       attachments:[{filename:param.title+".png",
                     contents: new Buffer(param.AD, 'base64'),
       }],
