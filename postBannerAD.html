@@ -14,23 +14,6 @@
   var Kx,Ky;
   var x0,y0;
   var K ;
-  function md(){
-      drag = true;
-      K = event.srcElement;
-      Kx = K.offsetLeft;
-      Ky = K.offsetTop;
-      x0 = event.clientX;
-      y0 = event.clientY;
-  }
-  function mv(){
-      if(drag){
-        K.style.posLeft = Kx +(event.clientX - x0);
-        K.style.poseTop = Ky +(event.clientY - y0);
-      }
-  }
-  function mup(){
-      drag = false;
-  }
   
   function fzchange(x){
       var chagefz =document.getElementById("word");
@@ -42,7 +25,7 @@
   }
 </script>
 </head>
-<body onmousemove="mv()" onmouseup="mup()">
+<body>
 
 <script src="facebook.js"></script>
 <iframe id="header" src="header.html" width="960px" height="100px" frameborder="0" scrolling="no"></iframe>
@@ -139,11 +122,11 @@
 </div>
 <div id="ADpreview" style="margin-left:450px;position:absolute; width=160px; height=80px;">
     <img class="operation" id="preview" src="">
-    <div id="word" onmousedown="md()"style='white-space:pre-wrap;'></div>
+    <div id="word" style='white-space:pre-wrap;'></div>
     <p id="topic"></p>
     <p id="topic5s"></p>
     <p id="topic5s1"></p>
-    <div id="content" onmousedown="md()"></div>
+    <div id="content" ></div>
     <div>
     <img  id="background"src="Image/bg.png" >
     <img  id="font"src="Image/font.png" >

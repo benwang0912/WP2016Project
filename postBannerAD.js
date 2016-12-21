@@ -141,12 +141,12 @@ $(document).ready(function(){
     $.ajax({
       type:"POST",
       url:"./Http/save.njs",
-      data:{"account":account,"ad":title,"searchKey":searchKey,"content":ADContent,"receiver":receiver},
+      data:{"account":account,"ad":title,"searchKey":searchKey,"content":ADContent},
       error:function(){
-        alert("Saving to database error");
+        //alert("Saving to database error");
       },
       success:function(){
-        alert("Saving to database success");
+        //alert("Saving to database success");
       }
     });
     

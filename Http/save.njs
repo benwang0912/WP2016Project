@@ -19,7 +19,7 @@ MongoClient.connect(url, function(err, db) {
     console.log("Connected correctly to server");
     var collection = db.collection('banner');
     collection.insert(
-        {account : param.account, ad : param.ad, searchKey : param.searchKey, content : param.content, email : param.receiver }
+        {account : param.account, ad : param.ad, searchKey : param.searchKey, content : param.content}
     , function(err, result) {
     if(err){
       console.log("Insertion failed");

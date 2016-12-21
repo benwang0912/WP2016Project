@@ -6,7 +6,7 @@
   opacity: 0.95;
   top: 0;
   left: 0;
-  display: none;
+  display: block;
   position: fixed;      
   background-color: #313131;
   overflow:auto;
