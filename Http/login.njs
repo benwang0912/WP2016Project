@@ -2,11 +2,12 @@
 var fs = require('fs');
 var qs = require('qs');
 var param = qs.parse(fs.readFileSync('/dev/stdin','utf-8'));
+var data = require('./secrets.json');
 
 console.log('Content-type:text/html; charset=utf-8\n');
 var mongodb = require('mongodb');
 var MongoClient = mongodb.MongoClient;
-var url = '';
+var url = data['url'];
 
 MongoClient.connect(url,function(err,db)
 {
