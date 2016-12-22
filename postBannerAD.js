@@ -69,6 +69,10 @@ $(document).ready(function(){
         alert("Something Wrong with login!!!!!");
       },
       success:function(res){
+        if(res.includes("Login failed")){
+          alert("User not found");
+          return;
+        }
         alert("Login success!!!");
         $("#header").contents().find("#username").text(res);
         $("#header").contents().find("#userinfo").css("display", "block");
