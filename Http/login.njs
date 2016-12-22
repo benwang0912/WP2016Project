@@ -18,15 +18,18 @@ MongoClient.connect(url,function(err,db)
   else{
   
     var collection = db.collection('user');
-    collection.find( { account: "param.account" ,password: "param.password"},function(err,result){
-    if(err)
-    {
-      console.log(err);
-      console.log('Login failed');
+    if(!collection){
+      db.close();
+      return new Error("error");
     }
-    else {
-   
-      console.log(param.account);
+      
+    collection.findOne( { 'account': param.account ,'password': param.password},function(err,result){
+    if(result) {
+      console.log(result.username);
+    }
+    else
+    {
+      console.log('Login failed');
     }
       
     db.close();
