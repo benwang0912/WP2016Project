@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 
@@ -7,14 +6,14 @@
 <link rel="stylesheet" type="text/css" href="app.css">
 <link rel="stylesheet"  href="popup.css" />
 <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
-<script src="application.js"></script>
-
+<script src="postBannerAD.js"></script>
+<script src="displayWorks.js"></script>
 </head>
-
 <body>
 
 <script src="facebook.js"></script>
 <iframe id="header" src="header.html" width="960px" height="100px" frameborder="0" scrolling="no"></iframe>
+
 <!-- Popup login form starts here -->
 <div id="loginForm">
   <div id="popupContact"> 
@@ -23,10 +22,9 @@
       <h2 style="text-align:center">Login</h2><hr/>
       <input type="text" name="Account" id="account" placeholder="Account"/>
       <input type="password" name="Password" id="password" placeholder="Password"/>
-      
       <a class="submit" id="login">Login </a>
       <a class="submit" id="popRegisterForm">Don't have a account? </a>
-      <fb:login-button scope='email, public_profile' onlogin="testAPI();">
+      <fb:login-button  onlogin="testAPI();">
       </fb:login-button>
 
     </form>
@@ -43,7 +41,7 @@
       <input type="password" name="Password" id="password" placeholder="Password"/>
       <input type="password" name="ConfirmPassword" id="confirmPassword" placeholder="Confirm Password"/>
       <input type="text" name="Username" id="username" placeholder="Username"/>
-      
+
       <a class="submit" id="register">Register </a>
 
     </form>
@@ -53,7 +51,7 @@
 
 <nav>
   <li class="Menu">
-    <a href="index.html" class="link"><font color="#20B2AA">We Are (team name)</font></a>
+    <a href="#" class="link">We Are (team name)</a>
   </li>
   <li class="Menu">
     <a href="#" class="link">Info</a>
@@ -91,53 +89,14 @@
   </li>
 </nav>
 
-<div>
-  <p class="bg_intro"></p>
-<!--portrait-->
-<section id="portrait">
-  <ul>
-    <li >
-      <img src="https://c4.staticflickr.com/6/5657/30621082091_9f05d9a0e5_z.jpg" id="per">
-      <b><p id="intro">
-        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;張維碩 <br><br></p>
-        <p id="detail">成功大學化學系三年級 <br>
-        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;擅長行銷、說<br>
-        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;服人，能夠帶<br>
-        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;給人感動<br></p>
-      </b>  
-    </li>
-    <li>
-      <img src="https://c4.staticflickr.com/6/5460/30075156523_04ab3c1c85_z.jpg" id="per">
-     <b> <p id="intro">
-         &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;孫上智 <br><br></p>
-        <p id="detail">成功大學資訊工程學系二年級 <br>
-        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;常常說著自己很廢 <br>
-         </p>
-      </b> 
-    </li>
-    <li>
-      <img src="https://c6.staticflickr.com/6/5515/30621081701_12acdd0e0e_z.jpg"  id="per">
-      <b><p id="intro">
-         &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;尤辰因 <br><br></p>
-        <p id="detail">成功大學資訊工程學系二年級 <br>
-         &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;常常莫名追隨不<br>
-         &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;切實際的人事物<br></p>
-      </b>  
-    </li>
-    <li>
-      <img src="https://c7.staticflickr.com/6/5750/30672771806_c921113245_z.jpg" id="per">
-      <p id="intro">
-         <b>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;王心平 <br><br></p>
-        <p id="detail">成功大學資訊工程學系四年級 <br>
-         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;擅長程式、英文<br>
-         </p>
-      </b>
-    </li>
-  </ul>
-</section>
+<!-- Gallery -->
+<div id="works">
 </div>
 
-<!--footer-->
+<!-- footer-->
+
 <iframe src="footer.html" width="960px" height="150px" frameborder="0" scrolling="no" ></iframe>
 
-</body>
+</body>  
+</html>
+

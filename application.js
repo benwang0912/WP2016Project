@@ -20,6 +20,7 @@ $(document).ready(function(){
     $("#signInButton").parent().show();
     $("#logoutButton").parent().hide();
     sessionStorage.removeItem("user");
+    validationCode = "";
     alert("Log out success");
   });
 
@@ -63,6 +64,7 @@ $(document).ready(function(){
           alert("User not found");
           return;
         }
+
         alert("Login success!!!");
         $("#header").contents().find("#username").text(res);
         $("#header").contents().find("#userinfo").css("display", "block");
@@ -191,6 +193,5 @@ $(function(){
   startSlider();
 
 });
-
 
 

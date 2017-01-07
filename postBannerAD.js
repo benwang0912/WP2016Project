@@ -174,7 +174,7 @@ $(document).ready(function(){
           $.ajax({
             type:"POST",
             url:"./Http/sendMail.njs",
-            data:{"title":title,"AD":img.replace(/^data:image\/png;base64,/,''), "receiver":receiverList},
+            data:{"user":sessionStorage.user,"title":title,"AD":img.replace(/^data:image\/png;base64,/,''), "receiver":receiverList},
             error:function(err){
               alert("Something wrong");
             },

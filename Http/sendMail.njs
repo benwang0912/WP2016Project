@@ -18,21 +18,25 @@ pass: data['gmailPassword']
 }
 });
 
-fs.writeFile("./test.png", param.AD,"base64" , function(error){
+fs.stat("./Banners/", function(err, stat){
+  if(err != null && err.code == "ENOENT"){
+    fs.mkdir("./Banners/" + param.user.replace(/\n|\r/g, ""));
+  }
+});
+
+var imagePath = "./Banners/" + param.user.replace(/\n|\r/g, "") + "/" + param.title+".png";
+
+fs.writeFile( imagePath, param.AD,"base64" , function(error){
     if(error){
       console.log(error);
     }
-
 });
 
 var mail = {
       from: data['gmailAccount'],
       to: param.receiver,
       subject: param.title,
-      html:"<img src='http://luffy.ee.ncku.edu.tw/~sinpin00/WP2016Project/Http/test.png'>",
-      attachments:[{filename:param.title+".png",
-                    contents: new Buffer(param.AD, 'base64'),
-      }],
+      html:"<img src='http://luffy.ee.ncku.edu.tw/~sinpin00/WP2016Project/Http/" + imagePath +"'>"
 }
 
 smtpTransport.sendMail(mail, function(error, response){
