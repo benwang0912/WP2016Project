@@ -9,7 +9,7 @@ $(document).ready(function(){
     success: function(res){
       var paths = res.split("\n");
       paths.forEach(path => {
-        //$("#works").append("<p>" + path + "</p>"); 
+        $("#works").append("<p>" + path + "</p>"); 
       });
     }
   });
